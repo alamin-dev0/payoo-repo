@@ -17,6 +17,7 @@ document.getElementById('add-money-btn')
 
         // 3. get the amount
         const amount = getValueFromInput("add-money-amount")
+        const currentBalance = getBalance();
         if (amount < 50) {
             alert("Invalid Amount Please select minimum 50 TK")
             return;
@@ -24,7 +25,7 @@ document.getElementById('add-money-btn')
 
 
         // 5. calculate new balance
-        const newBalance = getBalance() + Number(amount);
+        const newBalance = currentBalance + Number(amount);
         // 6. get the pin
         const pin = getValueFromInput("add-money-pin")
         if (pin === '1234') {
