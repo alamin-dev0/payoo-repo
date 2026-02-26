@@ -29,7 +29,7 @@ document.getElementById('add-money-btn')
         // 6. get the pin
         const pin = getValueFromInput("add-money-pin")
         if (pin === '1234') {
-            alert("Add Money Successful")
+            alert(`Add Money Successful. New Balance: ${newBalance} new date: ${new Date()}`)
             setBalance(newBalance);
         }
         else {
