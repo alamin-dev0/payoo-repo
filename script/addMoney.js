@@ -1,0 +1,39 @@
+document.getElementById('add-money-btn')
+    .addEventListener('click', function () {
+        // 1. get the bank
+        const bankAccount = getValueFromInput("add-money-bank")
+        //    console.log(bankAccount)
+        if (bankAccount === "Select a Bank") {
+            alert("Please Select a Bank")
+            return;
+        }
+
+        // 2. get the account number
+        const accountNumber = getValueFromInput("add-money-account-number")
+        if (accountNumber.length != 11) {
+            alert("Invalid Account Number")
+            return;
+        }
+
+        // 3. get the amount
+        const amount = getValueFromInput("add-money-amount")
+        if (amount < 50) {
+            alert("Invalid Amount Please select minimum 50 TK")
+            return;
+        }
+
+
+        // 5. calculate new balance
+        const newBalance = getBalance() + Number(amount);
+        // 6. get the pin
+        const pin = getValueFromInput("add-money-pin")
+        if (pin === '1234') {
+            alert("Add Money Successful")
+            setBalance(newBalance);
+        }
+        else {
+            alert("Invalid Pin")
+            return;
+        }
+
+    });
