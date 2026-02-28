@@ -31,6 +31,10 @@ document.getElementById('add-money-btn')
         if (pin === '1234') {
             alert(`Add Money Successful. New Balance: ${newBalance} new date: ${new Date()}`)
             setBalance(newBalance);
+            // 1- history-container  ke add korbo 
+            // 2- new div create korbo 
+            // 3- new div innerHTML korbo
+            // 4- history-container e newDiv append korbo
         }
         else {
             alert("Invalid Pin")
@@ -39,4 +43,3 @@ document.getElementById('add-money-btn')
 
     });
 
-    
