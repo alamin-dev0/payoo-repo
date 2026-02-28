@@ -31,10 +31,24 @@ document.getElementById('add-money-btn')
         if (pin === '1234') {
             alert(`Add Money Successful. New Balance: ${newBalance} new date: ${new Date()}`)
             setBalance(newBalance);
+
+            // const removeClassFromHistory = document.getElementById('history-container');
+            // removeClassFromHistory.classList.add('hidden');
+            // removeClassFromHistory.classList.remove('hidden');
+
             // 1- history-container  ke add korbo 
+            const history = document.getElementById('history-container');
             // 2- new div create korbo 
+            const newHistory = document.createElement('div');
             // 3- new div innerHTML korbo
+            newHistory.innerHTML = `
+            <div class="transaction-card p-5 bg-base-100">
+            Add Money Successful. 
+            New Balance: ${newBalance}, acc-no ${accountNumber} new date: ${new Date()}
+            </div>
+            `
             // 4- history-container e newDiv append korbo
+            history.appendChild(newHistory);
         }
         else {
             alert("Invalid Pin")
