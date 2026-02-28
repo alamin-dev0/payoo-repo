@@ -23,3 +23,19 @@ function setBalance(value) {
     const balanceElement = document.getElementById('balance');
     balanceElement.innerText = value;
 }
+
+
+// machine id > hide all and show id 
+function showOnly(id) {
+    const addMoney = document.getElementById('add-money-section');
+    const cashout = document.getElementById('cashout');
+    // console.log(`add money ${addMoney} cashout ${cashout}`)
+    // hide all
+    addMoney.classList.add('hidden');
+    cashout.classList.add('hidden');
+    // show only id
+    const selectedSection = document.getElementById(id);
+    selectedSection.classList.remove('hidden');
+    
+
+}

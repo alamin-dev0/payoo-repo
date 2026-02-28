@@ -55,14 +55,14 @@
 
         <div class="buttons grid grid-cols-3 gap-3 justify-between">
             <!-- button 1  -->
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('add-money-section')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="./assets/opt-1.png" alt="">
                 <p>Add Money</p>
             </button>
             <!-- button 1 end  -->
 
             <!-- button 2  -->
-            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+            <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
                 <img src="./assets/opt-2.png" alt="">
                 <p>Cashout</p>
             </button>
@@ -101,7 +101,7 @@
         </div>
     </section>
 
-    <section id="add-money-section">
+    <section id="add-money-section" class="w-11/12 mx-auto hidden">
         <h2 class="text-xl font-bold">Add Money</h2>
         <div class="form mx-auto mt-3">
             <div class="card bg-base-100 w-full shrink-0 shadow-xl rounded-2xl">
